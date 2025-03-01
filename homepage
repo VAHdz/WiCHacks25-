@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Student Bank Details Form</title>
+</head>
+<body>
+    
+    <div class="background">
+        <h2>Bank Details Form</h2>
+        <form id="bankForm">
+            
+            <!-- Personal Information -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <!-- Bank Details -->
+            <label for="bank">Bank Name:</label>
+            <input type="text" id="bank" name="bank" required>
+            
+            <label for="accountType">Account Type:</label>
+            <select id="accountType" name="accountType" required>
+                <option value="checking">Checking</option>
+                <option value="savings">Savings</option>
+            </select>
+            
+            <label for="accountNumber">Account Number:</label>
+            <input type="text" id="accountNumber" name="accountNumber" required>
+            
+            <label for="routingNumber">Routing Number / IFSC:</label>
+            <input type="text" id="routingNumber" name="routingNumber" required>
+            
+            <label for="swift">SWIFT/BIC Code (if applicable):</label>
+            <input type="text" id="swift" name="swift">
+
+            <div id="currencySection" style="display: none;">
+                <label for="destination">Destination Country:</label>
+                <input type="text" id="destination" name="destination">
+                
+                <label for="amount">Amount to Convert:</label>
+                <input type="number" id="amount" name="amount">
+            </div>
+
+            <button type="submit">Submit</button>
+
+        </form>
+        <script>
+            document.getElementById("bankForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent default form submission
+                window.location.href = "country1.html"; // Redirect to country1 page
+            });
+        </script>
+        
+    </div>
+    <div class="logo">
+        <img src="/logo.jpg" alt="logo" style="height: 90px; width: 90px;">
+    </div>
+
+</body>
+</html>
