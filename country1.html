@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="country1.css">
+    <link rel="stylesheet" href="homepage.html">
     <title>Currency Conversion</title>
 </head>
 <body>
@@ -16,11 +17,11 @@
             <label for="amount">Amount:</label>
             <input type="number" id="amount" placeholder="Enter amount">
 
-            <label for="fromCurrency">From Currency:</label>
-            <input type="text" id="fromCurrency" placeholder="e.g., USD">
-
+            <label for="fromCurrency">From Currency: </label>
+            <input type="text" id="fromCurrency" >
+   
             <label for="toCurrency">To Currency:</label>
-            <input type="text" id="toCurrency" placeholder="e.g., EUR">
+            <input type="text" id="toCurrency" >
 
             <button onclick="convertCurrency()">Convert</button>
 
@@ -49,6 +50,28 @@
         </div>
     </div>
 
+
     <script src="conversion.js"></script>
+
+    <script>
+        window.onload = function () {
+            // Retrieve stored values
+            let storedCurrCountry = localStorage.getItem("currCountry");
+            let storedVisitingCountry = localStorage.getItem("visitingCountry");
+
+            // Set them in the respective input fields if they exist
+            if (storedCurrCountry) {
+                document.getElementById("fromCurrency").value = storedCurrCountry;
+            }
+            if (storedVisitingCountry) {
+                document.getElementById("toCurrency").value = storedVisitingCountry;
+            }
+
+            // Optionally, trigger conversion automatically
+            if (storedCurrCountry && storedVisitingCountry) {
+                convertCurrency();
+            }
+        };
+    </script>
 </body>
 </html>
