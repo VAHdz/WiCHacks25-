@@ -8,54 +8,58 @@
 </head>
 <body>
 
-    <div class="container">
-        <h2>Minimum Travel Requirements Per Day</h2>
+    <div class="main-wrapper">
+        <!-- Left Side: Travel Essentials List -->
+        <div class="requirements-section">
+            <h2>Minimum Travel Requirements Per Day</h2>
 
-        <div class="requirement">
-            <h3>💧 Water</h3>
-            <p>Minimum: <input type="number" id="water" value="2" min="1" step="0.5"> - 3 liters per person</p>
-            <p>Approximate Cost: $<input type="number" id="waterCost" value="3" min="1" step="1"></p>
+            <div class="requirement">
+                <h3>💧 Water</h3>
+                <p>Minimum: 2-3 liters per person</p>
+                <p>Approximate Cost: <span>$3</span></p>
+            </div>
+
+            <div class="requirement">
+                <h3>🍲 Food</h3>
+                <p>Three meals per day</p>
+                <p>Approximate Cost: <span>$20</span></p>
+            </div>
+
+            <div class="requirement">
+                <h3>🏨 Accommodation</h3>
+                <p>Budget options: Hostels, budget hotels, Airbnb</p>
+                <p>Approximate Cost: <span>$50</span> per night</p>
+            </div>
+
+            <div class="requirement">
+                <h3>🚍 Local Transportation</h3>
+                <p>Public metro, buses, taxis, rental bikes/scooters</p>
+                <p>Approximate Cost: <span>$10</span> per day</p>
+            </div>
+
+            <div class="requirement">
+                <h3>📶 Internet & SIM</h3>
+                <p>Buy a local SIM card or get an international roaming plan</p>
+                <p>Approximate Cost: <span>$15</span> per week</p>
+            </div>
+
+            <div class="requirement">
+                <h3>💰 Emergency Cash</h3>
+                <p>Carry at least <span>$100</span> in local currency</p>
+                <p>Recommended Extra Budget: <span>$150</span></p>
+            </div>
         </div>
 
-        <div class="requirement">
-            <h3>🍲 Food</h3>
-            <p>Three meals per day</p>
-            <p>Approximate Cost: $<input type="number" id="foodCost" value="20" min="5" step="1"></p>
-        </div>
-
-        <div class="requirement">
-            <h3>🏨 Accommodation</h3>
-            <p>Budget options: Hostels, budget hotels, Airbnb</p>
-            <p>Approximate Cost: $<input type="number" id="accommodationCost" value="50" min="10" step="5"> per night</p>
-        </div>
-
-        <div class="requirement">
-            <h3>🚍 Local Transportation</h3>
-            <p>Public metro, buses, taxis, rental bikes/scooters</p>
-            <p>Approximate Cost: $<input type="number" id="transportCost" value="10" min="2" step="1"> per day</p>
-        </div>
-
-        <div class="requirement">
-            <h3>📶 Internet & SIM</h3>
-            <p>Buy a local SIM card or get an international roaming plan</p>
-            <p>Approximate Cost: $<input type="number" id="internetCost" value="15" min="5" step="5"> per week</p>
-        </div>
-
-        <div class="requirement">
-            <h3>💰 Emergency Cash</h3>
-            <p>Carry at least $<input type="number" id="emergencyCash" value="100" min="50" step="10"> in local currency</p>
-            <p>Recommended Extra Budget: $<input type="number" id="extraBudget" value="150" min="50" step="10"></p>
-        </div>
-
-        <div class="requirement">
-            <h3>💵 Total Daily Budget Estimate</h3>
-            <p>Budget Traveler: $<span id="budget">40</span> - $<span id="budgetMax">80</span> per day</p>
-            <p>Mid-Range Traveler: $<span id="midRange">80</span> - $<span id="midRangeMax">150</span> per day</p>
-            <p>Luxury Traveler: $<span id="luxury">200</span>+ per day</p>
-            <button onclick="updateBudget()">Update Budget</button>
+        <!-- Right Side: Budget Summary -->
+        <div class="budget-section">
+            <h2>💵 Total Daily Budget Estimate</h2>
+            <div class="budget-card">
+                <p><strong>Budget Traveler:</strong> <span>$40 - $80</span> per day</p>
+                <p><strong>Mid-Range Traveler:</strong> <span>$80 - $150</span> per day</p>
+                <p><strong>Luxury Traveler:</strong> <span>$200+</span> per day</p>
+            </div>
         </div>
     </div>
 
-    <script src="requirements.js"></script>
 </body>
 </html>

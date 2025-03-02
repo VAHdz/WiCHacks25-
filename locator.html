@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Nearby Banks</title>
+    <link rel="stylesheet" href="find-bank.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Find Nearby Banks</h2>
+        <p>We will use your location to find bank branches near you.</p>
+
+        <label for="bankName">Enter Bank Name:</label>
+        <input type="text" id="bankName" placeholder="Enter bank name (e.g., Chase, Bank of America)">
+        <button onclick="findBank()">Find Bank</button>
+
+        <h3>Your Location:</h3>
+        <p id="user-region">Detecting location...</p>
+
+        <div id="map"></div>
+
+        <h3>Nearby Bank Branches:</h3>
+        <ul id="bankResults"></ul>
+    </div>
+
+    <script src="find-bank.js"></script>
+    <script async defer 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbOomUgfghqGt2zR3Qyi6KPQuj76Vqt-w&libraries=places&callback=initMap">
+    </script>
+
+</body>
+</html>
