@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Bank Transfer</title>
+    <link rel="stylesheet" href="upi.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>🌐 Centralized UPI Payment System</h2>
+        
+        <!-- Bank Details -->
+        <label for="bankName">Bank Name:</label>
+        <input type="text" id="bankName" placeholder="Enter your bank name" required>
+
+        <label for="accountNumber">Account Number:</label>
+        <input type="text" id="accountNumber" placeholder="Enter your account number" required>
+
+        <label for="upiID">Your Universal UPI ID:</label>
+        <input type="text" id="upiID" readonly placeholder="Generated UPI ID">
+
+        <button onclick="generateUPIID()">Generate UPI ID</button>
+
+        <hr>
+
+        <!-- Transfer Money -->
+        <h3>Send Money</h3>
+        <label for="recipientUPI">Recipient's UPI ID:</label>
+        <input type="text" id="recipientUPI" placeholder="Enter recipient's UPI ID" required>
+
+        <label for="amount">Amount ($):</label>
+        <input type="number" id="amount" placeholder="Enter amount" required>
+
+        <button onclick="sendMoney()">Transfer Money</button>
+
+        <!-- Transaction Status -->
+        <p id="statusMessage"></p>
+    </div>
+
+    <script src="upi.js"></script>
+</body>
+</html>
