@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Essentials</title>
+    <title>Travel Cost Estimator</title>
     <link rel="stylesheet" href="requirements.css">
 </head>
 <body>
 
     <div class="main-wrapper">
+        <!-- Country Selection -->
+        <div class="selection-section">
+            <h2>🌍 Enter a Country Name</h2>
+            <input type="text" id="countryInput" placeholder="Type a country (e.g., Japan, France)">
+            <button onclick="fetchTravelCosts()">Get Cost</button>
+        </div>
+
         <!-- Left Side: Travel Essentials List -->
         <div class="requirements-section">
             <h2>Minimum Travel Requirements Per Day</h2>
@@ -16,37 +23,37 @@
             <div class="requirement">
                 <h3>💧 Water</h3>
                 <p>Minimum: 2-3 liters per person</p>
-                <p>Approximate Cost: <span>$3</span></p>
+                <p>Approximate Cost: <span id="water-cost">$0</span></p>
             </div>
 
             <div class="requirement">
                 <h3>🍲 Food</h3>
                 <p>Three meals per day</p>
-                <p>Approximate Cost: <span>$20</span></p>
+                <p>Approximate Cost: <span id="food-cost">$0</span></p>
             </div>
 
             <div class="requirement">
                 <h3>🏨 Accommodation</h3>
                 <p>Budget options: Hostels, budget hotels, Airbnb</p>
-                <p>Approximate Cost: <span>$50</span> per night</p>
+                <p>Approximate Cost: <span id="accommodation-cost">$0</span> per night</p>
             </div>
 
             <div class="requirement">
                 <h3>🚍 Local Transportation</h3>
                 <p>Public metro, buses, taxis, rental bikes/scooters</p>
-                <p>Approximate Cost: <span>$10</span> per day</p>
+                <p>Approximate Cost: <span id="transport-cost">$0</span> per day</p>
             </div>
 
             <div class="requirement">
                 <h3>📶 Internet & SIM</h3>
                 <p>Buy a local SIM card or get an international roaming plan</p>
-                <p>Approximate Cost: <span>$15</span> per week</p>
+                <p>Approximate Cost: <span id="internet-cost">$0</span> per week</p>
             </div>
 
             <div class="requirement">
                 <h3>💰 Emergency Cash</h3>
                 <p>Carry at least <span>$100</span> in local currency</p>
-                <p>Recommended Extra Budget: <span>$150</span></p>
+                <p>Recommended Extra Budget: <span id="extra-budget">$0</span></p>
             </div>
         </div>
 
@@ -54,12 +61,14 @@
         <div class="budget-section">
             <h2>💵 Total Daily Budget Estimate</h2>
             <div class="budget-card">
-                <p><strong>Budget Traveler:</strong> <span>$40 - $80</span> per day</p>
-                <p><strong>Mid-Range Traveler:</strong> <span>$80 - $150</span> per day</p>
-                <p><strong>Luxury Traveler:</strong> <span>$200+</span> per day</p>
+                <p><strong>Budget Traveler:</strong> <span id="budget-traveler">$0</span> per day</p>
+                <p><strong>Mid-Range Traveler:</strong> <span id="midrange-traveler">$0</span> per day</p>
+                <p><strong>Luxury Traveler:</strong> <span id="luxury-traveler">$0</span> per day</p>
             </div>
         </div>
     </div>
+
+    <script src="travel-requirements.js"></script>
 
 </body>
 </html>
