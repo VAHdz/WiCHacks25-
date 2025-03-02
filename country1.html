@@ -8,22 +8,40 @@
 </head>
 <body>
 
-    <div class="container">
-        <h2>Currency Converter</h2>
+    <div class="main-wrapper">
+        <!-- Left Side: Currency Conversion Section -->
+        <div class="container">
+            <h2>Gather Travel Information</h2>
 
-        <label for="amount">Amount:</label>
-        <input type="number" id="amount" placeholder="Enter amount">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" placeholder="Enter amount">
 
-        <label for="fromCurrency">From Currency:</label>
-        <input type="text" id="fromCurrency" placeholder="e.g., USD">
+            <label for="fromCurrency">From Currency:</label>
+            <input type="text" id="fromCurrency" placeholder="e.g., USD">
 
-        <label for="toCurrency">To Currency:</label>
-        <input type="text" id="toCurrency" placeholder="e.g., EUR">
+            <label for="toCurrency">To Currency:</label>
+            <input type="text" id="toCurrency" placeholder="e.g., EUR">
 
-        <button onclick="convertCurrency()">Convert</button>
+            <button onclick="convertCurrency()">Convert</button>
 
-        <h3>Converted Amount:</h3>
-        <p id="conversionResult">Enter details and click convert.</p>
+            <h3>Converted Amount:</h3>
+            <p id="conversionResult">Enter details and click convert.</p>
+        </div>
+
+        <!-- Right Side: Stacked Sections -->
+        <div class="right-section">
+            <div class="info-section">
+                <h2>Percentage of People Using:</h2>
+                <h3>Physical Currency: <span id="physicalCurrency">Loading...</span></h3>
+                <h3>Digital Currency: <span id="digitalCurrency">Loading...</span></h3>
+            </div>
+
+            <div class="info-section">
+                <h2>Travel & Expenses</h2>
+                <p>Want to find the <button> Cost for Expenses </button></p>
+                <p>Find <button>Banks around you</button></p>
+            </div>
+        </div>
     </div>
 
     <script src="conversion.js"></script>

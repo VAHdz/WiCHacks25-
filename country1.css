@@ -1,36 +1,104 @@
+/* General Page Styling */
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
+
+/* Main Wrapper to Align Sections */
+.main-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1000px;
+}
+
+/* Left Column - Currency Conversion */
 .container {
     background: white;
-    padding: 30px;
-    margin: 50px auto;
-    width: 50%;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 45%; /* Left section takes 45% of the width */
+    min-width: 300px;
 }
+
+/* Right Column - Stacked Sections */
+.right-section {
+    display: flex;
+    flex-direction: column; /* Ensures stacking */
+    gap: 15px; /* Space between stacked items */
+    width: 45%; /* Right section takes 45% of the width */
+    min-width: 300px;
+}
+
+/* Common Styling for Right Column Blocks */
+.info-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Headings */
 h2 {
-    color: #2d2d2d;
-    font-size: 24px;
-}
-.conversion-rate {
-    font-size: 20px;
-    font-weight: bold;
-    color: #007bff;
-}
-.currency-usage {
-    margin-top: 20px;
-    font-size: 18px;
     color: #333;
+    font-size: 22px;
+    margin-bottom: 15px;
 }
-.blank-space {
-    background: #ddd;
-    width: 80%;
-    height: 30px;
-    margin: 10px auto;
-    border-radius: 5px;
+
+h3 {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Input Fields */
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .main-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .container, .right-section {
+        width: 90%;
+    }
 }
