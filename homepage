@@ -34,14 +34,14 @@
                 <option value="savings">Savings</option>
             </select>
             
-            <label for="accountNumber">Account Number:</label>
-            <input type="text" id="accountNumber" name="accountNumber" required>
+            <label for="CurrentCountry">Current Country:</label>
+            <input type="text" id="currCountry" name="currCountry" required>
             
-            <label for="routingNumber">Routing Number / IFSC:</label>
-            <input type="text" id="routingNumber" name="routingNumber" required>
+            <label for="VistingCountry">Country Visting:</label>
+            <input type="text" id="VistingCountry" name="VistingCountry" required>
             
-            <label for="swift">SWIFT/BIC Code (if applicable):</label>
-            <input type="text" id="swift" name="swift">
+            <!-- <label for="swift">SWIFT/BIC Code (if applicable):</label>
+            <input type="text" id="swift" name="swift"> -->
 
             <div id="currencySection" style="display: none;">
                 <label for="destination">Destination Country:</label>
@@ -57,13 +57,25 @@
         <script>
             document.getElementById("bankForm").addEventListener("submit", function(event) {
                 event.preventDefault(); // Prevent default form submission
-                window.location.href = "country1.html"; // Redirect to country1 page
+
+                let currCountry = document.getElementById("currCountry").value;
+                let visitingCountry = document.getElementById("visitingCountry").value; 
+
+                // Store values in localStorage
+                localStorage.setItem("currCountry", currCountry);
+                localStorage.setItem("visitingCountry", visitingCountry);
+
+                window.location.href = "country1.html"; // Redirect to country1.html
+
             });
         </script>
         
     </div>
     <div class="logo">
         <img src="/logo.jpg" alt="logo" style="height: 90px; width: 90px;">
+    </div>
+    <div class="bank">
+        <img src="/bank.png" alt="logo">
     </div>
 
 </body>

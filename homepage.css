@@ -1,7 +1,7 @@
 /* Apply a background image to the entire page */
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
+    background-color: #667674;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -11,6 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    right:0; 
     position: relative;
 }
 
@@ -23,6 +24,22 @@ body {
     height: auto;
 }
 
+.bank {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50vw;  /* Covers half the viewport width */
+    height: 100vh; /* Covers full viewport height */
+    overflow: hidden; /* Prevents any overflow */
+}
+
+.bank img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire space */
+}
+
+
 /* Center the form and make it transparent */
 .background {
     background: rgba(255, 255, 255, 0.5); /* 50% transparent white */
@@ -30,9 +47,15 @@ body {
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     width: 400px;
-    text-align: center;
-    backdrop-filter: blur(10px); /* Adds a glass-like effect */
+    text-align: left;  /* Keep text aligned properly */
+    backdrop-filter: blur(10px); /* Glass-like effect */
+    
+    position: absolute;
+    right: 50px; /* Adjust for padding from right */
+    top: 50%;
+    transform: translateY(-50%); /* Centers it vertically */
 }
+
 
 /* Form headings */
 h2 {
@@ -87,6 +110,7 @@ button {
 button:hover {
     background: #218838;
 }
+
 
 /* Responsive Design */
 @media screen and (max-width: 480px) {

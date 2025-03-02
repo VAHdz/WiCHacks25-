@@ -1,7 +1,7 @@
 /* General Page Styling */
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    font-family: Arial, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: #667674;
     margin: 0;
     padding: 0;
     display: flex;
